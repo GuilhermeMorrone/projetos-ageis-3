@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body onload="saudacao()">
+    <header>
+        <div class="header-content">
+            <img  class="logo-tray" src="../img/tray-novamarca.png">
+            <div class="usuario-content">
+                <h2><span id="saudacao"></span> Usuário</h2>
+            </div>
+        </div>
+        
+    </header>
+    
+    <main>
+        <section class="feedback-section">
+            <h2>Nos ajude a melhorar!</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <fieldset>
+                    <legend>Experiência de Compra</legend>
+                    <label>Como você avalia sua experiência de compra?</label>
+                    <div class="star-rating" data-name="compra">
+                        <i class='bx bxs-star star' data-value="1"></i>
+                        <i class='bx bxs-star star' data-value="2"></i>
+                        <i class='bx bxs-star star' data-value="3"></i>
+                        <i class='bx bxs-star star' data-value="4"></i>
+                        <i class='bx bxs-star star' data-value="5"></i>
+                    </div>
+
+                    <label>Como você avalia a facilidade de navegação na loja?</label>
+                    <div class="star-rating" data-name="navegacao">
+                        <i class='bx bxs-star star' data-value="1"></i>
+                        <i class='bx bxs-star star' data-value="2"></i>
+                        <i class='bx bxs-star star' data-value="3"></i>
+                        <i class='bx bxs-star star' data-value="4"></i>
+                        <i class='bx bxs-star star' data-value="5"></i>
+                    </div>
+
+                    <label>Como você avalia o processo de pagamento?</label>
+                    <div class="star-rating" data-name="pagamento">
+                        <i class='bx bxs-star star' data-value="1"></i>
+                        <i class='bx bxs-star star' data-value="2"></i>
+                        <i class='bx bxs-star star' data-value="3"></i>
+                        <i class='bx bxs-star star' data-value="4"></i>
+                        <i class='bx bxs-star star' data-value="5"></i>
+                    </div>
+
+                    <label>Qual é a probabilidade de recomendar nossa loja?</label>
+                    <div class="star-rating" data-name="recomendacao">
+                        <i class='bx bxs-star star' data-value="1"></i>
+                        <i class='bx bxs-star star' data-value="2"></i>
+                        <i class='bx bxs-star star' data-value="3"></i>
+                        <i class='bx bxs-star star' data-value="4"></i>
+                        <i class='bx bxs-star star' data-value="5"></i>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <label>Como você avalia o cumprimento do prazo de entrega?</label>
+                    <div class="star-rating" data-name="prazo">
+                        <i class='bx bxs-star star' data-value="1"></i>
+                        <i class='bx bxs-star star' data-value="2"></i>
+                        <i class='bx bxs-star star' data-value="3"></i>
+                        <i class='bx bxs-star star' data-value="4"></i>
+                        <i class='bx bxs-star star' data-value="5"></i>
+                        <input type="hidden" name="prazo" value="0">
+                    </div>
+                
+                    <label>Como você avalia a condição do produto ao chegar?</label>
+                    <div class="star-rating" data-name="condicao">
+                        <i class='bx bxs-star star' data-value="1"></i>
+                        <i class='bx bxs-star star' data-value="2"></i>
+                        <i class='bx bxs-star star' data-value="3"></i>
+                        <i class='bx bxs-star star' data-value="4"></i>
+                        <i class='bx bxs-star star' data-value="5"></i>
+                        <input type="hidden" name="condicao" value="0">
+                    </div>
+                
+                    <label>Como você avalia o custo do frete?</label>
+                    <div class="star-rating" data-name="frete">
+                        <i class='bx bxs-star star' data-value="1"></i>
+                        <i class='bx bxs-star star' data-value="2"></i>
+                        <i class='bx bxs-star star' data-value="3"></i>
+                        <i class='bx bxs-star star' data-value="4"></i>
+                        <i class='bx bxs-star star' data-value="5"></i>
+                        <input type="hidden" name="frete" value="0">
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Atendimento e Suporte</legend>
+                    <label>Você precisou de suporte ou atendimento durante a compra?<br></label>
+                    <input type="radio" id="suporte-sim" name="suporte" value="sim" required>
+                    <button for="suporte-sim">Sim<br></button>
+                    <input type="radio" id="suporte-nao" name="suporte" value="nao" required>
+                    <button for="suporte-nao">Não<br></button>
+                    <br>
+                    
+                    <label>Se Sim, como você avalia sua experiência com o suporte?</label>
+                    <div class="star-rating" data-name="suporte">
+                        <i class='bx bxs-star star' data-value="1"></i>
+                        <i class='bx bxs-star star' data-value="2"></i>
+                        <i class='bx bxs-star star' data-value="3"></i>
+                        <i class='bx bxs-star star' data-value="4"></i>
+                        <i class='bx bxs-star star' data-value="5"></i>
+                        <input type="hidden" name="suporte" value="0">
+                    </div>
+
+                    
+                    <label for="comentario-suporte">Comentário adicional (opcional):</label>
+                    <textarea id="comentario-suporte" name="comentario-suporte" rows="4"></textarea>
+                    <br>
+                    
+                    <label>Você gostaria de ser contatado para suporte ou melhorias?</label>
+                    <input type="radio" id="contato-sim" name="contato" value="sim" required>
+                    <button for="contato-sim">Sim</button>
+                    <input type="radio" id="contato-nao" name="contato" value="nao" required>
+                    <button for="contato-nao">Não</button>
+                </fieldset>
+                
+                <button id="botao-enviar" type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
