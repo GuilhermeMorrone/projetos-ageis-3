@@ -209,7 +209,7 @@ footer {
 
 .star-rating .star.active,
 .star-rating .star:hover,
-.star-rating .star:hover ~ .star {
+.star-rating .star:has(~ .star:hover) {
   color: #ffb400; 
 }
 
