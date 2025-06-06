@@ -80,7 +80,8 @@ document.addEventListener("DOMContentLoaded", function () {
   localStorage.setItem('token', data.token);
 
   // Redireciona para o formulário
-  window.location.href = '/tela-formulario/html/index.html';
+  window.location.replace('/public/tela-formulario/html/index.html');
+  console.log(window.location.href);
 })
 
         .catch(err => {
